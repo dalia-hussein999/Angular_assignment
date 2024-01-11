@@ -1,0 +1,28 @@
+.notfound-container{
+    width: 60%;
+    margin:200px auto;
+    text-align: center;  
+}
+figure {
+   width: 80%;
+   margin: 50px auto;
+}
+figure img{
+display: inline-block;
+width: 100%;
+}
+.notfound-container p{
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 40px 0;
+}
+.btn{
+    margin-bottom: 50px;
+    background-color: #aaafe7;
+    font-size: 20px;
+    border: none;
+}
+.btn:hover{
+    background-color: #737ce3;
+}

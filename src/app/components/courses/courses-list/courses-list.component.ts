@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Course } from 'src/app/interface/course';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -7,9 +8,10 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./courses-list.component.css']
 })
 export class CoursesListComponent {
-constructor(private dataServive : DataService){}
+  courses !: Course[];
+constructor(private dataService : DataService){}
 
 ngOnInit(){
-  this.dataServive.getCoursesData().subscribe((data: any) => console.log(data))
+  this.dataService.getCoursesData().subscribe((data: any) => this.courses = data)
 }
 }
