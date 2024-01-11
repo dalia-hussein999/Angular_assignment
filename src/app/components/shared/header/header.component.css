@@ -1,0 +1,26 @@
+.navbar-container{
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-menu{
+    width: 18%;
+    display: flex;
+}
+.logo{
+    display: inline-block;
+    width: 130px;
+    height: 85px;
+}
+.nav-link .pi{
+    cursor: pointer;
+    padding: 15px;
+    margin: 0 20px;
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+.nav-link .pi:hover{
+    color: white;
+    background-color: var(--primary-color);
+}
