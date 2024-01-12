@@ -1,0 +1,29 @@
+.login-card{
+    width: 70%;
+    margin: 200px auto;
+    padding: 50px;
+}
+.logo{
+    display: inline-block;
+    width:  140px;
+    height: 140px;
+}
+input{
+    height: 60px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.login-btn{
+    height: 60px;
+    font-size: 22px;
+    background-color: var(--blue-color);
+    border: none;
+    margin-top: 18px;
+}
+label{
+    font-size: 20px;
+}
+#emailHelp , #passwordHelp{
+    margin-bottom: 20px;
+    color: var(--blue-color);
+}

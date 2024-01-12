@@ -4,7 +4,7 @@
     text-align: center;  
 }
 figure {
-   width: 80%;
+   width: 70%;
    margin: 50px auto;
 }
 figure img{
@@ -19,7 +19,7 @@ width: 100%;
 }
 .btn{
     margin-bottom: 50px;
-    background-color: #aaafe7;
+    background-color: #a0a7ef;
     font-size: 20px;
     border: none;
 }
