@@ -1,0 +1,40 @@
+.form-container{
+    width: 60%;
+    margin: 100px auto;
+   
+}
+.register-container{
+    text-align: center;
+    padding: 70px;
+}
+form{
+    width: 80%;
+    margin:40px  auto;
+    text-align: center;
+}
+label{
+    display: inline-block;
+    font-size: 18px;
+    width: 20%;
+}
+input{
+    width: 50%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom:7px ;
+}
+.form-text{
+    color: red;
+    margin-bottom: 10px;
+    margin-left: 35%;
+    text-align: left;
+}
+button{
+    width: 69%;
+    height: 60px;
+    font-size: 22px;
+    background-color: var(--blue-color);
+    border: none;
+    margin: 18px 0 0 20px;
+}

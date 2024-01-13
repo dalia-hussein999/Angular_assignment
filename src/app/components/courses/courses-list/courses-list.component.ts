@@ -9,9 +9,16 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CoursesListComponent {
   courses !: Course[];
+  pageSize = 4;
+  currentPage = 1;
 constructor(private dataService : DataService){}
 
 ngOnInit(){
   this.dataService.getCoursesData().subscribe((data: any) => this.courses = data)
 }
 }
+
+
+
+
+

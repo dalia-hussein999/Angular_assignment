@@ -2,13 +2,61 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 .card{
-    width: 32%;
+    width: 48%;
     min-height: 400px;
     margin-bottom: 10px;
+    position: relative;
+}
+#title{
+    width: 80%;
+    font-size: 32px;
 }
 .surface-card{
     height: 100%;
-
 }
+.discount{
+    position: absolute;
+    right: 8px;
+    top: 18px;
+    height: 50px;
+   color: beige;
+   font-size: 28px;
+   font-weight: bold;
+    padding: 5px 5px 0 55px;
+    clip-path: polygon(25% 9%, 100% 9%, 100% 100%, 25% 100%, 35% 49%);
+    background-color: var(--background);
+}
+.discount:hover{
+    background:  linear-gradient(to left, #e66465, #9198e5 75%);
+}
+.author{
+    color: #9198e5;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 30px;
+}
+.price{
+    color:#e66465;
+    font-size: 32px;
+}
+.tages{
+    font-size: 18px;
+}
+.icons{
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    
+}
+.pagination{
+    text-align: center;
+    margin: 35px;
+    font-size: 23px;
+}
+
+
+

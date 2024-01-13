@@ -1,3 +1,7 @@
+.login-container{
+    margin-top: 30px;
+    
+}
 .login-card{
     width: 70%;
     margin: 200px auto;
@@ -27,3 +31,4 @@ label{
     margin-bottom: 20px;
     color: var(--blue-color);
 }
+

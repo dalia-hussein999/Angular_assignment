@@ -1,1 +1,162 @@
-<p>register works!</p>
+<div class="container form-container">
+    <div class="surface-card shadow-2 border-round register-container">
+        <img src="../../../../assets/images/logo.png" alt="Image" class="logo" />
+        <h3 class="text-900 text-3xl font-medium mb-3">Welcome To Our Website</h3>
+        
+  <form [formGroup]="registerForm"
+    (ngSubmit)="handleFormSubmit()">
+    
+     <label for="firstNameInput" class="form-label">First Name: </label>
+      <input
+      placeholder="First Name"
+        type="text"
+        class="form-control"
+        id="firstNameInput"
+        aria-describedby="firstNameHelp"
+        formControlName="firstName"/>
+
+      <div
+        id="firstNameHelp"
+        class="form-text"
+        *ngIf="
+          registerForm.controls['firstName'].touched &&
+          registerForm.controls['firstName'].invalid
+        "
+      >
+        <span *ngIf="registerForm.controls['firstName'].errors?.['required']"
+          >This field is required</span
+        >
+      </div>
+      <div class="mb-3">
+      <label for="lastNameInput" class="form-label">Last Name: </label>
+      <input
+      placeholder="Last Name"
+        type="text"
+        class="form-control"
+        id="lastNameInput"
+        aria-describedby="lastNameHelp"
+        formControlName="lastName"
+      />
+      
+      <div
+        id="lastNameHelp"
+        class="form-text"
+        *ngIf="
+          registerForm.controls['lastName'].touched &&
+          registerForm.controls['lastName'].invalid
+        "
+      >
+        <span *ngIf="registerForm.controls['lastName'].errors?.['required']"
+          >This field is required</span
+        >
+      </div>
+    </div>
+      <div class="mb-3">
+        <label for="emailInput" class="form-label">Email Address: </label>
+        <input
+        placeholder="Email Address"
+          type="email"
+          class="form-control"
+          id="emailInput"
+          aria-describedby="emailHelp"
+          formControlName="email"
+        />
+        <div
+          id="emailHelp"
+          class="form-text "
+          *ngIf="
+            registerForm.controls['email'].touched &&
+            registerForm.controls['email'].invalid
+          "
+        >
+          <span *ngIf="registerForm.controls['email'].errors?.['required']"
+            >This field is required</span
+          >
+          <span *ngIf="registerForm.controls['email'].errors?.['minlength']"
+            >Min.length is 3 characters</span
+          >
+        </div>
+      
+      <div class="mb-3">
+        <label for="userNameInput" class="form-label">User Name: </label>
+        <input
+        placeholder="User Name"
+          type="text"
+          class="form-control"
+          id="userNameInput"
+          aria-describedby="nameHelp"
+          formControlName="userName"
+        />
+
+        <div
+          id="userNameHelp"
+          class="form-text text-danger"
+          *ngIf="
+            registerForm.controls['userName'].touched &&
+            registerForm.controls['userName'].invalid
+          "
+        >
+          <span *ngIf="registerForm.controls['userName'].errors?.['required']"
+            >This field is required</span
+          >
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="passwordInput" class="form-label">Password: </label>
+        <input
+        placeholder="Password"
+          type="password"
+          class="form-control"
+          id="passwordInput"
+          formControlName="password"
+        />
+        <div
+          id="passwordeHelp"
+          class="form-text text-danger"
+          *ngIf="
+            registerForm.controls['password'].touched &&
+            registerForm.controls['password'].invalid
+          "
+        >
+          <span *ngIf="registerForm.controls['password'].errors?.['required']"
+            >This field is required</span
+          >
+          <span *ngIf="registerForm.controls['password'].errors?.['pattern']"
+            >Invalid Password</span
+          >
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="confirmPasswordInput" class="form-label"
+          >Confirm Password: </label
+        >
+        <input
+        placeholder="Confirm Password"
+          type="password"
+          class="form-control"
+          id="confirmPasswordInput"
+          formControlName="confirmPassword"
+        />
+        <div
+          id="confirmPasswordHelp"
+          class="form-text text-danger"
+          *ngIf="
+            registerForm.controls['confirmPassword'].touched &&
+            registerForm.controls['confirmPassword'].invalid
+          "
+        >
+          <span
+            *ngIf="registerForm.controls['confirmPassword'].errors?.['required']"
+            >This field is required</span
+          >
+          <span
+            *ngIf="registerForm.controls['confirmPassword'].errors?.['notmatch']"
+            >Passwords do not match</span
+          >
+        </div>
+      </div>
+      <button type="submit"  pButton pRipple label="Submit" icon="pi pi-user" ></button>
+   
+  
+</div>
+

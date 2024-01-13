@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoursesListComponent } from './components/courses/courses-list/courses-list.component';
+ import { CoursesListComponent } from './components/courses/courses-list/courses-list.component'; 
 import { CoursedetailsComponent } from './components/courses/coursedetails/coursedetails.component';
 import { WishlistComponent } from './components/courses/wishlist/wishlist.component';
 import { NotfoundPageComponent } from './components/courses/notfound-page/notfound-page.component';
