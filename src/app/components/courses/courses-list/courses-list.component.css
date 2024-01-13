@@ -1,3 +1,63 @@
+.search{
+    background: linear-gradient(to left, #e66465, #9198e5 75%);
+    min-height: 200px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+} 
+
+
+.form {
+    position: relative;
+    width: 30rem;
+    background: #9198e5;
+    border-radius: .7rem;
+  }
+  input, .go {
+    height: 5rem;
+    border: 0;
+    color: #2f2f2f;
+    font-size: 1.8rem;
+  }
+  input[type="search"] {
+    outline: 0; 
+    width: 100%;
+    background: beige;
+    padding: 0 1.6rem;
+    border-radius: .7rem;
+    appearance: none; 
+    transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+  }
+  .go {
+    display: none; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6rem;
+    font-weight: bold;
+    background: #7e84c8;
+    color: beige;
+    border-radius: 0 .7rem .7rem 0;
+  }
+  input:not(:placeholder-shown) {
+    border-radius: .7rem 0 0 .7rem;
+    width: calc(100% - 6rem);
+    + button {
+      display: block;
+    }
+  }
+  label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
 .card-container{
     display: flex;
     justify-content: space-between;
@@ -11,7 +71,7 @@
     position: relative;
 }
 #title{
-    width: 80%;
+    
     font-size: 32px;
 }
 .surface-card{

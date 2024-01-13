@@ -21,6 +21,8 @@ import { CartComponent } from './components/cart/cart/cart.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { BannerComponent } from './components/shared/banner/banner.component';
+import { CustomFilterPipe } from './pipes/custom-filter.pipe';
+import { SearchResultComponent } from './components/courses/search-result/search-result.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { BannerComponent } from './components/shared/banner/banner.component';
     LoginComponent,
     RegisterComponent,
     BannerComponent,
+    CustomFilterPipe,
+    SearchResultComponent,
    
     
   ],

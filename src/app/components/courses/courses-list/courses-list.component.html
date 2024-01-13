@@ -1,13 +1,26 @@
 <app-banner></app-banner>
+<div class="search">
+    <div class="container">
+    
+    <div class="form">
+        <label for="search-text">Search Text</label>
+        <input type="search" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="Enter text to search" 
+          autofocus>
+          <button type="submit" class="go" >Go</button> 
+      </div>
+</div> 
+</div> 
 
 <div class="container">
+
     <div class="card-container">
-        <div *ngFor="let course of courses | paginate:{itemsPerPage : pageSize ,currentPage : currentPage};let i=index" class="col-12 md:col-6 lg:col-3 card">
+        <div *ngFor="let course of (displayedCourses | paginate:{itemsPerPage : pageSize, currentPage: currentPage} | customFilter:searchText); let i=index" class="col-12 md:col-6 lg:col-3 card">
             <div class="surface-card shadow-2 p-3 border-round">
                 <div class="discount" *ngIf="course.discountPercentage !== '0'">
                     <h3>{{ course.discountPercentage }}</h3>
                 </div>
-
+    
                 <div class="flex justify-content-between mb-3">
                     <div>
                         <h2 class="block text-500 font-medium mb-3" id="title">{{ course.courseName }}</h2>
