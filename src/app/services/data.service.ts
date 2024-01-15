@@ -5,31 +5,31 @@ import { Course } from '../interface/course';
 import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
   private apiUrl = './assets/data.json';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getCoursesData(): Observable<Course[]> {
     return this.http.get<Course[]>(this.apiUrl);
   }
   getFilteredData(searchQuary: string): Observable<Course[]> {
     return this.getCoursesData().pipe(
-      map(courses => {
+      map((courses) => {
         if (!searchQuary) {
-          return courses; // Return all courses if searchTerm is empty
+          return courses;
         }
 
-        searchQuary = searchQuary.toLowerCase(); // Convert to lowercase for case-insensitive search
+        searchQuary = searchQuary.toLowerCase();
 
-        return courses.filter(course =>
-          course.courseName.toLowerCase().includes(searchQuary) ||
-          course.author.toLowerCase().includes(searchQuary) ||
-          course.tags.some(tag => tag.toLowerCase().includes(searchQuary))
+        return courses.filter(
+          (course) =>
+            course.courseName.toLowerCase().includes(searchQuary) ||
+            course.author.toLowerCase().includes(searchQuary) ||
+            course.tags.some((tag) => tag.toLowerCase().includes(searchQuary))
         );
       })
     );
   }
 }
-
