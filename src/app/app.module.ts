@@ -11,7 +11,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { CoursesListComponent } from './components/courses/courses-list/courses-list.component';
-import {  PaginationService } from 'ngx-pagination';
+import { PaginationService } from 'ngx-pagination';
 import { CoursedetailsComponent } from './components/courses/coursedetails/coursedetails.component';
 import { WishlistComponent } from './components/courses/wishlist/wishlist.component';
 
@@ -21,9 +21,7 @@ import { CartComponent } from './components/cart/cart/cart.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { BannerComponent } from './components/shared/banner/banner.component';
-import { CustomFilterPipe } from './pipes/custom-filter.pipe';
-import { SearchResultComponent } from './components/courses/search-result/search-result.component';
-
+import { CourseItemComponent } from './components/courses/course-item/course-item.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +35,7 @@ import { SearchResultComponent } from './components/courses/search-result/search
     LoginComponent,
     RegisterComponent,
     BannerComponent,
-    CustomFilterPipe,
-    SearchResultComponent,
-   
-    
+    CourseItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,9 +47,8 @@ import { SearchResultComponent } from './components/courses/search-result/search
     ReactiveFormsModule,
     PaginatorModule,
     NgxPaginationModule,
-    
   ],
   providers: [PaginationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
