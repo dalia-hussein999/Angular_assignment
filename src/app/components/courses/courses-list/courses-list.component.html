@@ -40,8 +40,8 @@
 <!-- filtered courses -->
 <div class="container" *ngIf="showResults">
   <div class="card-container">
-    <div *ngFor="let course of courses" class="col-12 md:col-6 lg:col-3 card">
-      <app-course-item></app-course-item>
-    </div>
+    
+      <app-course-item *ngFor="let course of displayedCourses" class="col-12 md:col-6 lg:col-3 card"  [course]="course"></app-course-item>
+    
   </div>
 </div>

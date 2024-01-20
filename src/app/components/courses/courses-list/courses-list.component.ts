@@ -10,7 +10,7 @@ import { DataService } from '../../../services/data.service';
 export class CoursesListComponent implements OnInit {
   courses: Course[] =[];
   displayedCourses: any[] = [];
-  searchText: any = '';
+  
   pageSize = 4;
   currentPage = 1;
   searchQuary : string ='';
@@ -33,7 +33,8 @@ export class CoursesListComponent implements OnInit {
   onGoButtonClick() {
     this.showResults = true; 
     this.dataService.getFilteredData(this.searchQuary).subscribe(filteredData => {
-      this.courses = filteredData;
+      this.displayedCourses = filteredData;  
     });
   }
+  
 }
