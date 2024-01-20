@@ -3,12 +3,16 @@
    padding: 20px 40px;
     margin: 30px 0;
 } 
-:host ::ng-deep .p-breadcrumb ul li .p-menuitem-text { 
+:host ::ng-deep .p-breadcrumb ul li .p-menuitem-text ,:host ::ng-deep .p-breadcrumb ul li .p-menuitem-link .p-menuitem-icon
+{ 
    
-    font-size: 18px;
+    font-size: 2rem;
 }
 :host ::ng-deep .p-breadcrumb ul li:last-child .p-menuitem-text { 
     color: var(--background) !important; 
     font-weight: 600; 
     
 }
+:host ::ng-deep .p-breadcrumb ul li .p-menuitem-link .p-menuitem-icon { 
+    font-size: 2rem !important; 
+} 

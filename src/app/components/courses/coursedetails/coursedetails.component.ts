@@ -28,7 +28,7 @@ export class CoursedetailsComponent implements OnInit {
   updateBreadcrumbModel() {
     this.items = [
       { label: 'All Courses', routerLink: '/home' },
-      { label: this.courseName || 'Course', routerLink: `/home/${this.courseName}` }
+      { label: this.courseName ?? "" }
     ];
   }
 }

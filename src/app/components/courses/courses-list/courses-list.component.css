@@ -1,7 +1,7 @@
 .search {
-  background: linear-gradient(to left, #e66465, #9198e5 75%);
-  min-height: 200px;
-  margin: 30px 0;
+  background: var(--gradient);
+  min-height: 20rem;
+  margin: 3rem 0;
   display: flex;
   justify-content: center;
 }
@@ -9,7 +9,7 @@
 .form {
   position: relative;
   width: 30rem;
-  background: #9198e5;
+  background: var(--blue-color);
   border-radius: 0.7rem;
 }
 input,
@@ -54,28 +54,51 @@ label {
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
   border: 0;
-  height: 1px;
-  width: 1px;
+  height: 0.1rem;
+  width: 0.1rem;
   overflow: hidden;
 }
 .card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 .card {
   width: 48%;
-  min-height: 400px;
-  margin-bottom: 10px;
+  min-height: 32rem;
+  margin-bottom: 1rem;
   position: relative;
-}
-#title {
-  font-size: 32px;
 }
 
 .pagination {
   text-align: center;
-  margin: 35px;
-  font-size: 23px;
+  margin: 3.5rem;
+  font-size: 2.3rem;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    min-height: 25rem;
+    margin-bottom: 1rem;
+  }
+  .search {
+    min-height: 12rem;
+    margin: 1.5rem 0;
+  }
+  .form {
+    width: 40%;
+  }
+  input,
+  .go {
+    height: 3rem;
+
+    font-size: 1rem;
+  }
+  .pagination {
+    margin: 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 375px) {
 }

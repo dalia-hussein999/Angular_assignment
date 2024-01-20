@@ -21,7 +21,7 @@ export class DataService {
           return courses;
         }
 
-        searchQuary = searchQuary.toLowerCase();
+        searchQuary = searchQuary.toLowerCase().trim();
 
         return courses.filter(
           (course) =>
