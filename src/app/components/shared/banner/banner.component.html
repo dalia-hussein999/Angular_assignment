@@ -6,7 +6,8 @@
             <span> &nbsp;latest </span>
             <span> &nbsp;courses </span>
             <span> &nbsp;on </span> 
-            <span> &nbsp;angular </span>  
+            <span *ngIf="courseType"> &nbsp;angular </span> 
+            <span *ngIf="!courseType"> &nbsp;react </span>  
         </h1>
         <button pButton type="button" 
             label="Show Courses" class="btn" > 

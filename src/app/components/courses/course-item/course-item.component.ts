@@ -1,5 +1,6 @@
 import { Component , Input} from '@angular/core';
 import { Course } from '../../../interface/course';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-item',
@@ -8,4 +9,9 @@ import { Course } from '../../../interface/course';
 })
 export class CourseItemComponent {
 @Input() course !: Course;
+
+constructor( private router: Router){}
+sendNameToDetails(courseName: string) {
+  this.router.navigate(['details', courseName]);
+}
 }

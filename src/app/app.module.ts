@@ -22,6 +22,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { BannerComponent } from './components/shared/banner/banner.component';
 import { CourseItemComponent } from './components/courses/course-item/course-item.component';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { CourseItemComponent } from './components/courses/course-item/course-ite
     ReactiveFormsModule,
     PaginatorModule,
     NgxPaginationModule,
+    BreadcrumbModule
   ],
   providers: [PaginationService],
   bootstrap: [AppComponent],

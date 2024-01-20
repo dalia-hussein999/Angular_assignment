@@ -15,6 +15,7 @@ export class CoursesListComponent implements OnInit {
   currentPage = 1;
   searchQuary : string ='';
   showResults: boolean = false;
+  courseType: boolean = true;
 
   constructor(private dataService: DataService) {}
 
