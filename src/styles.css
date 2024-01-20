@@ -30,7 +30,7 @@ h1 {
   color: beige;
   text-transform: uppercase;
   font-size: 3.6rem;
-  font-weight: 700;
+  font-weight: 600;
   max-width: 40ch;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
